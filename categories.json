@@ -1,0 +1,1362 @@
+[
+  {
+    "name": "law",
+    "list_target": "law",
+    "body_target": "law",
+    "note": "현행법령(공포일)",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "eflaw",
+    "list_target": "eflaw",
+    "body_target": "eflaw",
+    "note": "현행법령(시행일)",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "admrul",
+    "list_target": "admrul",
+    "body_target": "admrul",
+    "note": "현행 행정규칙",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "ordin",
+    "list_target": "ordin",
+    "body_target": "ordin",
+    "note": "현행 자치법규",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "prec",
+    "list_target": "prec",
+    "body_target": "prec",
+    "note": "판례",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "detc",
+    "list_target": "detc",
+    "body_target": "detc",
+    "note": "헌재결정례",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "expc",
+    "list_target": "expc",
+    "body_target": "expc",
+    "note": "법령해석례",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "decc",
+    "list_target": "decc",
+    "body_target": "decc",
+    "note": "행정심판례",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "trty",
+    "list_target": "trty",
+    "body_target": "trty",
+    "note": "조약",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "lstrm",
+    "list_target": "lstrm",
+    "body_target": "lstrm",
+    "note": "법령용어",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "elaw",
+    "list_target": "elaw",
+    "body_target": "elaw",
+    "note": "영문법령",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "licbyl",
+    "list_target": "licbyl",
+    "body_target": null,
+    "note": "법령 별표·서식",
+    "mobile": false,
+    "list_only": true,
+    "query_default": "*",
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "admbyl",
+    "list_target": "admbyl",
+    "body_target": null,
+    "note": "행정규칙 별표·서식",
+    "mobile": false,
+    "list_only": true,
+    "query_default": "*",
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "ordinbyl",
+    "list_target": "ordinbyl",
+    "body_target": null,
+    "note": "자치법규 별표·서식",
+    "mobile": false,
+    "list_only": true,
+    "query_default": "*",
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "school",
+    "list_target": "school",
+    "body_target": "school",
+    "note": "대학/학칙",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "public",
+    "list_target": "public",
+    "body_target": "public",
+    "note": "지방공사공단",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "pi",
+    "list_target": "pi",
+    "body_target": "pi",
+    "note": "공공기관",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "ppc",
+    "list_target": "ppc",
+    "body_target": "ppc",
+    "note": "개인정보보호위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "eiac",
+    "list_target": "eiac",
+    "body_target": "eiac",
+    "note": "고용보험심사위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "ftc",
+    "list_target": "ftc",
+    "body_target": "ftc",
+    "note": "공정거래위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "acr",
+    "list_target": "acr",
+    "body_target": "acr",
+    "note": "국민권익위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "fsc",
+    "list_target": "fsc",
+    "body_target": "fsc",
+    "note": "금융위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "nlrc",
+    "list_target": "nlrc",
+    "body_target": "nlrc",
+    "note": "노동위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "kcc",
+    "list_target": "kcc",
+    "body_target": "kcc",
+    "note": "방송미디어통신위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "iaciac",
+    "list_target": "iaciac",
+    "body_target": "iaciac",
+    "note": "산업재해보상보험재심사위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "oclt",
+    "list_target": "oclt",
+    "body_target": "oclt",
+    "note": "중앙토지수용위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "ecc",
+    "list_target": "ecc",
+    "body_target": "ecc",
+    "note": "중앙환경분쟁조정위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "sfc",
+    "list_target": "sfc",
+    "body_target": "sfc",
+    "note": "증권선물위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "nhrck",
+    "list_target": "nhrck",
+    "body_target": "nhrck",
+    "note": "국가인권위원회 결정문",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "moelCgmExpc",
+    "list_target": "moelCgmExpc",
+    "body_target": "moelCgmExpc",
+    "note": "고용노동부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "molitCgmExpc",
+    "list_target": "molitCgmExpc",
+    "body_target": "molitCgmExpc",
+    "note": "국토교통부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mofeCgmExpc",
+    "list_target": "mofeCgmExpc",
+    "body_target": null,
+    "note": "재정경제부 법령해석",
+    "mobile": false,
+    "list_only": true,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mofCgmExpc",
+    "list_target": "mofCgmExpc",
+    "body_target": "mofCgmExpc",
+    "note": "해양수산부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "moisCgmExpc",
+    "list_target": "moisCgmExpc",
+    "body_target": "moisCgmExpc",
+    "note": "행정안전부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "meCgmExpc",
+    "list_target": "meCgmExpc",
+    "body_target": "meCgmExpc",
+    "note": "기후에너지환경부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "kcsCgmExpc",
+    "list_target": "kcsCgmExpc",
+    "body_target": "kcsCgmExpc",
+    "note": "관세청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "ntsCgmExpc",
+    "list_target": "ntsCgmExpc",
+    "body_target": null,
+    "note": "국세청 법령해석",
+    "mobile": false,
+    "list_only": true,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "moeCgmExpc",
+    "list_target": "moeCgmExpc",
+    "body_target": "moeCgmExpc",
+    "note": "교육부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "msitCgmExpc",
+    "list_target": "msitCgmExpc",
+    "body_target": "msitCgmExpc",
+    "note": "과학기술정보통신부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mpvaCgmExpc",
+    "list_target": "mpvaCgmExpc",
+    "body_target": "mpvaCgmExpc",
+    "note": "국가보훈부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mndCgmExpc",
+    "list_target": "mndCgmExpc",
+    "body_target": "mndCgmExpc",
+    "note": "국방부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mafraCgmExpc",
+    "list_target": "mafraCgmExpc",
+    "body_target": "mafraCgmExpc",
+    "note": "농림축산식품부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mcstCgmExpc",
+    "list_target": "mcstCgmExpc",
+    "body_target": "mcstCgmExpc",
+    "note": "문화체육관광부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mojCgmExpc",
+    "list_target": "mojCgmExpc",
+    "body_target": "mojCgmExpc",
+    "note": "법무부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mohwCgmExpc",
+    "list_target": "mohwCgmExpc",
+    "body_target": "mohwCgmExpc",
+    "note": "보건복지부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "motieCgmExpc",
+    "list_target": "motieCgmExpc",
+    "body_target": "motieCgmExpc",
+    "note": "산업통상부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mogefCgmExpc",
+    "list_target": "mogefCgmExpc",
+    "body_target": "mogefCgmExpc",
+    "note": "성평등가족부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mofaCgmExpc",
+    "list_target": "mofaCgmExpc",
+    "body_target": "mofaCgmExpc",
+    "note": "외교부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mssCgmExpc",
+    "list_target": "mssCgmExpc",
+    "body_target": "mssCgmExpc",
+    "note": "중소벤처기업부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mouCgmExpc",
+    "list_target": "mouCgmExpc",
+    "body_target": "mouCgmExpc",
+    "note": "통일부 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "molegCgmExpc",
+    "list_target": "molegCgmExpc",
+    "body_target": "molegCgmExpc",
+    "note": "법제처 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mfdsCgmExpc",
+    "list_target": "mfdsCgmExpc",
+    "body_target": "mfdsCgmExpc",
+    "note": "식품의약품안전처 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mpmCgmExpc",
+    "list_target": "mpmCgmExpc",
+    "body_target": "mpmCgmExpc",
+    "note": "인사혁신처 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "kmaCgmExpc",
+    "list_target": "kmaCgmExpc",
+    "body_target": "kmaCgmExpc",
+    "note": "기상청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "khsCgmExpc",
+    "list_target": "khsCgmExpc",
+    "body_target": "khsCgmExpc",
+    "note": "국가유산청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "rdaCgmExpc",
+    "list_target": "rdaCgmExpc",
+    "body_target": "rdaCgmExpc",
+    "note": "농촌진흥청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "npaCgmExpc",
+    "list_target": "npaCgmExpc",
+    "body_target": "npaCgmExpc",
+    "note": "경찰청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "dapaCgmExpc",
+    "list_target": "dapaCgmExpc",
+    "body_target": "dapaCgmExpc",
+    "note": "방위사업청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "mmaCgmExpc",
+    "list_target": "mmaCgmExpc",
+    "body_target": "mmaCgmExpc",
+    "note": "병무청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "kfsCgmExpc",
+    "list_target": "kfsCgmExpc",
+    "body_target": "kfsCgmExpc",
+    "note": "산림청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "nfaCgmExpc",
+    "list_target": "nfaCgmExpc",
+    "body_target": "nfaCgmExpc",
+    "note": "소방청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "okaCgmExpc",
+    "list_target": "okaCgmExpc",
+    "body_target": "okaCgmExpc",
+    "note": "재외동포청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "ppsCgmExpc",
+    "list_target": "ppsCgmExpc",
+    "body_target": "ppsCgmExpc",
+    "note": "조달청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "guideList_only",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "kdcaCgmExpc",
+    "list_target": "kdcaCgmExpc",
+    "body_target": "kdcaCgmExpc",
+    "note": "질병관리청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "kostatCgmExpc",
+    "list_target": "kostatCgmExpc",
+    "body_target": "kostatCgmExpc",
+    "note": "국가데이터처 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "kipoCgmExpc",
+    "list_target": "kipoCgmExpc",
+    "body_target": "kipoCgmExpc",
+    "note": "지식재산처 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "kcgCgmExpc",
+    "list_target": "kcgCgmExpc",
+    "body_target": "kcgCgmExpc",
+    "note": "해양경찰청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "naaccCgmExpc",
+    "list_target": "naaccCgmExpc",
+    "body_target": "naaccCgmExpc",
+    "note": "행정중심복합도시건설청 법령해석",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "ttSpecialDecc",
+    "list_target": "ttSpecialDecc",
+    "body_target": "ttSpecialDecc",
+    "note": "조세심판원 특별행정심판례",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "kmstSpecialDecc",
+    "list_target": "kmstSpecialDecc",
+    "body_target": "kmstSpecialDecc",
+    "note": "해양안전심판원 특별행정심판례",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "acrSpecialDecc",
+    "list_target": "acrSpecialDecc",
+    "body_target": "acrSpecialDecc",
+    "note": "국민권익위원회 특별행정심판례",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "adapSpecialDecc",
+    "list_target": "adapSpecialDecc",
+    "body_target": "adapSpecialDecc",
+    "note": "인사혁신처 소청심사위원회 특별행정심판재결례",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "baiConsult",
+    "list_target": "baiConsult",
+    "body_target": "baiConsult",
+    "note": "감사원 사전컨설팅 의견서",
+    "mobile": false,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "inferred",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "lstrmAI",
+    "list_target": "lstrmAI",
+    "body_target": null,
+    "note": "법령정보지식베이스 법령용어",
+    "mobile": false,
+    "list_only": true,
+    "query_default": "*",
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "dlytrm",
+    "list_target": "dlytrm",
+    "body_target": null,
+    "note": "법령정보지식베이스 일상용어",
+    "mobile": false,
+    "list_only": true,
+    "query_default": "*",
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "m_law",
+    "list_target": "law",
+    "body_target": "law",
+    "note": "모바일 법령",
+    "mobile": true,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "HTML"
+    ]
+  },
+  {
+    "name": "m_admrul",
+    "list_target": "admrul",
+    "body_target": "admrul",
+    "note": "모바일 행정규칙",
+    "mobile": true,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "HTML"
+    ]
+  },
+  {
+    "name": "m_ordin",
+    "list_target": "ordin",
+    "body_target": "ordin",
+    "note": "모바일 자치법규",
+    "mobile": true,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "HTML"
+    ]
+  },
+  {
+    "name": "m_prec",
+    "list_target": "prec",
+    "body_target": "prec",
+    "note": "모바일 판례",
+    "mobile": true,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "HTML"
+    ]
+  },
+  {
+    "name": "m_detc",
+    "list_target": "detc",
+    "body_target": "detc",
+    "note": "모바일 헌재결정례",
+    "mobile": true,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "HTML"
+    ]
+  },
+  {
+    "name": "m_expc",
+    "list_target": "expc",
+    "body_target": "expc",
+    "note": "모바일 법령해석례",
+    "mobile": true,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "HTML"
+    ]
+  },
+  {
+    "name": "m_decc",
+    "list_target": "decc",
+    "body_target": "decc",
+    "note": "모바일 행정심판례",
+    "mobile": true,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "HTML"
+    ]
+  },
+  {
+    "name": "m_trty",
+    "list_target": "trty",
+    "body_target": "trty",
+    "note": "모바일 조약",
+    "mobile": true,
+    "list_only": false,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "HTML"
+    ]
+  },
+  {
+    "name": "m_ordinbyl",
+    "list_target": "ordinbyl",
+    "body_target": null,
+    "note": "모바일 자치법규 별표·서식",
+    "mobile": true,
+    "list_only": true,
+    "query_default": "*",
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  },
+  {
+    "name": "m_lstrm",
+    "list_target": "lstrm",
+    "body_target": null,
+    "note": "모바일 법령용어",
+    "mobile": true,
+    "list_only": true,
+    "query_default": null,
+    "confidence": "verified",
+    "list_formats": [
+      "JSON"
+    ],
+    "body_formats": [
+      "XML"
+    ]
+  }
+]

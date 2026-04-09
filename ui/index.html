@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal QA</title>
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --panel: #fffaf2;
+      --ink: #1d1a17;
+      --muted: #665f57;
+      --line: #d6cab8;
+      --accent: #0f5c4d;
+      --accent-2: #8a4b22;
+      --good: #165b33;
+      --warn: #8d6708;
+      --bad: #9b2226;
+      --shadow: 0 14px 40px rgba(57, 44, 30, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans KR", "Pretendard", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(15, 92, 77, 0.12), transparent 28%),
+        radial-gradient(circle at left bottom, rgba(138, 75, 34, 0.12), transparent 24%),
+        var(--bg);
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 28px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15, 92, 77, 0.08);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-family: "Noto Serif KR", serif;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.08;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .hero-side {
+      padding: 24px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .stat {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .stat span {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 18px;
+    }
+
+    .controls {
+      padding: 20px;
+      display: grid;
+      gap: 14px;
+      align-self: start;
+      position: sticky;
+      top: 16px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    textarea,
+    select,
+    input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      padding: 12px 14px;
+    }
+
+    textarea {
+      min-height: 180px;
+      resize: vertical;
+      line-height: 1.55;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 0;
+      border-radius: 14px;
+      padding: 12px 16px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    button:hover { transform: translateY(-1px); }
+    button:disabled { opacity: 0.6; cursor: wait; transform: none; }
+    .primary { background: var(--accent); color: #fff; }
+    .secondary { background: #efe5d7; color: var(--ink); }
+
+    .examples {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+
+    .results {
+      display: grid;
+      gap: 16px;
+    }
+
+    .panel {
+      padding: 20px;
+    }
+
+    .panel h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .answer {
+      white-space: pre-wrap;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .kv {
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .kv strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .grounded { background: rgba(22, 91, 51, 0.1); color: var(--good); }
+    .review { background: rgba(141, 103, 8, 0.12); color: var(--warn); }
+    .error { background: rgba(155, 34, 38, 0.1); color: var(--bad); }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      line-height: 1.6;
+    }
+
+    pre {
+      margin: 0;
+      padding: 16px;
+      border-radius: 16px;
+      background: #1d1a17;
+      color: #f6efe6;
+      overflow: auto;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .small {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .warning-box {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border: 1px solid rgba(141, 103, 8, 0.22);
+      border-radius: 14px;
+      background: rgba(141, 103, 8, 0.08);
+      color: var(--warn);
+      line-height: 1.6;
+      font-size: 13px;
+      white-space: pre-wrap;
+    }
+
+    @media (max-width: 980px) {
+      .hero, .workspace, .meta-grid, .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .controls {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="card hero-main">
+        <div class="eyebrow">LAW OPEN DATA</div>
+        <h1>근거 기반 법률 QA</h1>
+        <p>검색, 시험문제 평가, grounded answer, provider fallback을 한 화면에서 확인하는 로컬 운영 UI다. 결과는 항상 LAW OPEN DATA 근거와 함께 반환된다.</p>
+      </div>
+      <div class="card hero-side">
+        <div class="stat"><strong>기본 런타임</strong><span id="runtimeProvider">loading...</span></div>
+        <div class="stat"><strong>기본 모델</strong><span id="runtimeModel">loading...</span></div>
+        <div class="stat"><strong>Fallback</strong><span id="runtimeFallback">loading...</span></div>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <aside class="card controls">
+        <label>
+          질의
+          <textarea id="query">행정심판법 제18조</textarea>
+        </label>
+
+        <div class="grid-2">
+          <label>
+            Response Mode
+            <select id="responseMode">
+              <option value="">default</option>
+              <option value="grounded">grounded</option>
+              <option value="llm_preferred">llm_preferred</option>
+              <option value="llm_only">llm_only</option>
+            </select>
+          </label>
+          <label>
+            Provider
+            <select id="provider">
+              <option value="">default</option>
+              <option value="openrouter">openrouter</option>
+              <option value="ollama-minimax">ollama-minimax</option>
+              <option value="ollama-qwen">ollama-qwen</option>
+              <option value="groq">groq</option>
+              <option value="glm">glm</option>
+              <option value="gemini">gemini</option>
+              <option value="codex">codex(agent)</option>
+              <option value="qwen">qwen(agent)</option>
+              <option value="gemini-agent">gemini(agent)</option>
+              <option value="claude-code">claude-code(agent)</option>
+              <option value="claude-stepfree">claude-stepfree(agent)</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="grid-2">
+          <label>
+            Judge Mode
+            <select id="judgeMode">
+              <option value="">off</option>
+              <option value="single">single</option>
+              <option value="debate">debate</option>
+            </select>
+          </label>
+          <label>
+            Judge Agent
+            <select id="judgeAgent">
+              <option value="">default</option>
+              <option value="codex">codex</option>
+              <option value="qwen">qwen</option>
+              <option value="gemini">gemini</option>
+              <option value="claude-code">claude-code</option>
+              <option value="claude-stepfree">claude-stepfree</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Judge Critic Agent
+          <select id="judgeCriticAgent">
+            <option value="">none</option>
+            <option value="qwen">qwen</option>
+            <option value="gemini">gemini</option>
+            <option value="codex">codex</option>
+            <option value="claude-code">claude-code</option>
+            <option value="claude-stepfree">claude-stepfree</option>
+          </select>
+        </label>
+
+        <div class="actions">
+          <button id="submitBtn" class="primary">질의 실행</button>
+          <button id="schemaBtn" class="secondary">스키마 보기</button>
+        </div>
+
+        <div>
+          <div class="small" style="margin-bottom:8px;">예시 질의</div>
+          <div class="examples">
+            <button class="chip" data-example="행정심판법 제18조">조문 조회</button>
+            <button class="chip" data-example="84누180">판례 조회</button>
+            <button class="chip" data-example="2004헌마275">헌재결정례 조회</button>
+            <button class="chip" data-example="다음 중 틀린 것의 개수는?\nㄱ. 행정심판법 제18조\nㄴ. 행정심판법 제18조에 따라 청구인은 대리인을 선임할 수 없다.\nㄷ. 2004헌마275\nㄹ. 84누180\n1) 1개\n2) 2개\n3) 3개\n4) 4개">시험문제</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="results">
+        <section class="card panel">
+          <h2>Answer</h2>
+          <div id="statusBadge" class="badge review">대기 중</div>
+          <div id="answer" class="answer" style="margin-top:14px;">질의를 실행하면 결과가 여기에 표시됩니다.</div>
+          <div id="warningBox" class="warning-box" style="display:none;"></div>
+        </section>
+
+        <section class="card panel">
+          <h2>Meta</h2>
+          <div class="meta-grid" id="metaGrid"></div>
+        </section>
+
+        <section class="card panel">
+          <h2>Evidence</h2>
+          <ul id="evidenceList"></ul>
+        </section>
+
+        <section class="card panel">
+          <h2>Citations</h2>
+          <ul id="citationsList"></ul>
+        </section>
+
+        <section class="card panel">
+          <h2>Raw JSON</h2>
+          <pre id="rawJson">{}</pre>
+        </section>
+      </main>
+    </section>
+  </div>
+
+  <script>
+    const els = {
+      query: document.getElementById('query'),
+      responseMode: document.getElementById('responseMode'),
+      provider: document.getElementById('provider'),
+      judgeMode: document.getElementById('judgeMode'),
+      judgeAgent: document.getElementById('judgeAgent'),
+      judgeCriticAgent: document.getElementById('judgeCriticAgent'),
+      submitBtn: document.getElementById('submitBtn'),
+      schemaBtn: document.getElementById('schemaBtn'),
+      answer: document.getElementById('answer'),
+      statusBadge: document.getElementById('statusBadge'),
+      warningBox: document.getElementById('warningBox'),
+      metaGrid: document.getElementById('metaGrid'),
+      evidenceList: document.getElementById('evidenceList'),
+      citationsList: document.getElementById('citationsList'),
+      rawJson: document.getElementById('rawJson'),
+      runtimeProvider: document.getElementById('runtimeProvider'),
+      runtimeModel: document.getElementById('runtimeModel'),
+      runtimeFallback: document.getElementById('runtimeFallback'),
+    };
+
+    function setBusy(isBusy) {
+      els.submitBtn.disabled = isBusy;
+      els.schemaBtn.disabled = isBusy;
+      els.submitBtn.textContent = isBusy ? '실행 중...' : '질의 실행';
+    }
+
+    function setBadge(status, grounded) {
+      const badge = els.statusBadge;
+      badge.className = 'badge ' + (grounded ? 'grounded' : status === 'not_found' ? 'error' : 'review');
+      badge.textContent = `status=${status} / grounded=${grounded}`;
+    }
+
+    function renderMeta(result) {
+      const rows = [
+        ['scope', result.scope],
+        ['question_type', result.question_type],
+        ['route', result.route],
+        ['source_type', result.source_type || '-'],
+        ['doc_id', result.doc_id || '-'],
+        ['final_answer_source', result.final_answer_source || '-'],
+        ['llm_provider', result.llm_provider || '-'],
+        ['llm_model', result.llm_model || '-'],
+        ['judge_mode', result.judge_mode || '-'],
+        ['judge_status', result.judge_result?.status || '-'],
+        ['schema_version', result.schema_version || '-'],
+      ];
+      els.metaGrid.innerHTML = rows.map(([k, v]) => `
+        <div class="kv">
+          <strong>${k}</strong>
+          <span>${String(v)}</span>
+        </div>
+      `).join('');
+    }
+
+    function renderWarnings(result) {
+      const warnings = result.warnings || [];
+      const pieces = [];
+      if (result.final_answer_source === 'llm') {
+        pieces.push('현재 화면의 최종 Answer는 LLM 재서술입니다. 정확한 근거는 Evidence와 Citations를 우선 확인해야 합니다.');
+      }
+      if (warnings.length) {
+        pieces.push(...warnings);
+      }
+      if (!pieces.length) {
+        els.warningBox.style.display = 'none';
+        els.warningBox.textContent = '';
+        return;
+      }
+      els.warningBox.style.display = 'block';
+      els.warningBox.textContent = pieces.join('\n');
+    }
+
+    function renderList(target, items) {
+      target.innerHTML = '';
+      for (const item of items || []) {
+        const li = document.createElement('li');
+        li.textContent = item;
+        target.appendChild(li);
+      }
+      if (!target.children.length) {
+        const li = document.createElement('li');
+        li.textContent = '-';
+        target.appendChild(li);
+      }
+    }
+
+    async function loadHealth() {
+      const res = await fetch('/health');
+      const data = await res.json();
+      els.runtimeProvider.textContent = data.defaults.provider || '-';
+      els.runtimeModel.textContent = data.defaults.model || '-';
+      const judgePrefix = data.defaults.judge_chain?.length ? `judge: ${(data.defaults.judge_chain || []).join(' -> ')} / ` : '';
+      els.runtimeFallback.textContent = judgePrefix + (data.defaults.fallback_chain || []).join(' -> ');
+    }
+
+    async function requestAnswer() {
+      setBusy(true);
+      try {
+        const provider = els.provider.value;
+        const payload = {
+          query: els.query.value.trim(),
+          response_mode: els.responseMode.value || 'grounded',
+          judge_mode: els.judgeMode.value || undefined,
+          judge_agent: els.judgeAgent.value || undefined,
+          judge_critic_agent: els.judgeCriticAgent.value || undefined,
+        };
+        if (provider === 'codex' || provider === 'qwen' || provider === 'claude-code' || provider === 'claude-stepfree') {
+          payload.run_agent = provider;
+        } else if (provider === 'gemini-agent') {
+          payload.run_agent = 'gemini';
+        } else if (provider) {
+          payload.llm_provider = provider;
+        }
+
+        const res = await fetch('/answer', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        const result = data.result;
+        setBadge(result.status, result.grounded);
+        els.answer.textContent = result.answer || '';
+        renderWarnings(result);
+        renderMeta(result);
+        renderList(els.evidenceList, result.evidence);
+        renderList(els.citationsList, result.citations);
+        els.rawJson.textContent = JSON.stringify(result, null, 2);
+      } catch (error) {
+        setBadge('error', false);
+        els.answer.textContent = String(error);
+        renderWarnings({ warnings: [String(error)], final_answer_source: null });
+        els.metaGrid.innerHTML = '';
+        renderList(els.evidenceList, []);
+        renderList(els.citationsList, []);
+        els.rawJson.textContent = '{}';
+      } finally {
+        setBusy(false);
+      }
+    }
+
+    async function showSchema() {
+      setBusy(true);
+      try {
+        const res = await fetch('/schema');
+        const data = await res.json();
+        setBadge('schema', false);
+        els.answer.textContent = '현재 응답 스키마를 표시합니다.';
+        renderWarnings({ warnings: [], final_answer_source: null });
+        renderMeta({
+          scope: '-',
+          question_type: '-',
+          route: '-',
+          source_type: '-',
+          doc_id: '-',
+          final_answer_source: '-',
+          llm_provider: '-',
+          llm_model: '-',
+          schema_version: data.schema_version,
+        });
+        renderList(els.evidenceList, Object.keys(data.result_schema.properties));
+        renderList(els.citationsList, data.result_schema.required);
+        els.rawJson.textContent = JSON.stringify(data, null, 2);
+      } finally {
+        setBusy(false);
+      }
+    }
+
+    document.querySelectorAll('[data-example]').forEach((button) => {
+      button.addEventListener('click', () => {
+        els.query.value = button.dataset.example;
+      });
+    });
+    els.submitBtn.addEventListener('click', requestAnswer);
+    els.schemaBtn.addEventListener('click', showSchema);
+    els.responseMode.value = 'grounded';
+
+    loadHealth().catch((error) => {
+      els.runtimeProvider.textContent = 'error';
+      els.runtimeModel.textContent = String(error);
+      els.runtimeFallback.textContent = '-';
+    });
+  </script>
+</body>
+</html>

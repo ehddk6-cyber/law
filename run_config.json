@@ -1,0 +1,15 @@
+{
+  "OC": "da",
+  "BASE_SEARCH": "https://www.law.go.kr/DRF/lawSearch.do",
+  "BASE_SERVICE": "https://www.law.go.kr/DRF/lawService.do",
+  "DISPLAY": 100,
+  "TIMEOUT": 60,
+  "RETRIES": 3,
+  "RATE_LIMIT_SECONDS": 0.15,
+  "DOWNLOAD_ALL_FORMATS": false,
+  "DOWNLOAD_MOBILE": true,
+  "DOWNLOAD_BODY": true,
+  "DOWNLOAD_KB_BASE": true,
+  "DOWNLOAD_SEED_APIS": true,
+  "started_at": "2026-03-23 07:55:06"
+}

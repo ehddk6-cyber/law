@@ -1,0 +1,65 @@
+{
+  "default": {
+    "provider": "openrouter",
+    "model": "stepfun/step-3.5-flash:free",
+    "response_mode": "llm_preferred",
+    "judge_mode": "off",
+    "judge_chain": [
+      "codex",
+      "qwen"
+    ],
+    "include_agent_prompts": false,
+    "fallback_chain": [
+      "openrouter",
+      "ollama-minimax",
+      "claude-code",
+      "ollama-qwen"
+    ],
+    "agent_timeout_seconds": 180,
+    "judge_timeout_seconds": 180
+  },
+  "providers": {
+    "anthropic": {
+      "env_key": "ANTHROPIC_API_KEY",
+      "base_url": "https://api.anthropic.com/v1"
+    },
+    "gemini": {
+      "env_key": "GEMINI_API_KEY",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta"
+    },
+    "openai": {
+      "env_key": "OPENAI_API_KEY",
+      "base_url": "https://api.openai.com/v1"
+    },
+    "openrouter": {
+      "env_key": "OPENROUTER_API_KEY",
+      "base_url": "https://openrouter.ai/api/v1"
+    },
+    "groq": {
+      "env_key": "GROQ_API_KEY",
+      "base_url": "https://api.groq.com/openai/v1"
+    },
+    "glm": {
+      "env_key": "GLM_API_KEY",
+      "base_url": "https://open.bigmodel.cn/api/paas/v4"
+    },
+    "ollama": {
+      "base_url": "http://127.0.0.1:11434",
+      "model": "minimax-m2.7:cloud"
+    },
+    "ollama-minimax": {
+      "base_url": "http://127.0.0.1:11434",
+      "model": "minimax-m2.7:cloud"
+    },
+    "ollama-qwen": {
+      "base_url": "http://127.0.0.1:11434",
+      "model": "qwen3.5:cloud"
+    },
+    "lmstudio": {
+      "base_url": "http://127.0.0.1:1234/v1"
+    },
+    "vllm": {
+      "base_url": "http://127.0.0.1:8000/v1"
+    }
+  }
+}
